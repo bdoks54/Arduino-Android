@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <Button
+            android:id="@+id/btnBluetoothConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Connect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBluetoothDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Disconnect"
+            app:layout_constraintStart_toEndOf="@+id/btnBluetoothConnect"
+            app:layout_constraintTop_toTopOf="@+id/btnBluetoothConnect" />
+
+        <Button
+            android:id="@+id/btnSendData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="켜기"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tvBluetoothStatus"
+            app:layout_constraintTop_toBottomOf="@+id/btn_timer" />
+
+        <Button
+            android:id="@+id/btn_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="on"
+            app:layout_constraintStart_toStartOf="@+id/btnSendData"
+            app:layout_constraintTop_toBottomOf="@+id/tvReceiveData" />
+
+        <Button
+            android:id="@+id/btn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="off"
+            app:layout_constraintStart_toEndOf="@+id/btn_on"
+            app:layout_constraintTop_toTopOf="@+id/btn_on" />
+
+        <Button
+            android:id="@+id/btn_br1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="@+id/btn_on"
+            app:layout_constraintTop_toBottomOf="@+id/btn_on" />
+
+        <Button
+            android:id="@+id/btn_br2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            app:layout_constraintStart_toStartOf="@+id/btn_off"
+            app:layout_constraintTop_toTopOf="@+id/btn_br1" />
+
+        <Button
+            android:id="@+id/btn_br3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/btn_br2"
+            app:layout_constraintTop_toTopOf="@+id/btn_br2" />
+
+        <Button
+            android:id="@+id/btn_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="red"
+            app:layout_constraintStart_toStartOf="@+id/btn_br1"
+            app:layout_constraintTop_toBottomOf="@+id/btn_br1" />
+
+        <Button
+            android:id="@+id/btn_grn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="green"
+            app:layout_constraintStart_toStartOf="@+id/btn_br2"
+            app:layout_constraintTop_toTopOf="@+id/btn_red" />
+
+        <Button
+            android:id="@+id/btn_blu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blue"
+            app:layout_constraintStart_toStartOf="@+id/btn_br3"
+            app:layout_constraintTop_toTopOf="@+id/btn_grn" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="23dp"
+            android:text="close"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/btn_customset"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarB" />
+
+        <Button
+            android:id="@+id/btn_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Color"
+            app:layout_constraintEnd_toEndOf="@+id/btn_blu"
+            app:layout_constraintTop_toTopOf="@+id/btn_timer" />
+
+        <Button
+            android:id="@+id/btn_customset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintStart_toStartOf="@+id/seekBarB"
+            app:layout_constraintTop_toTopOf="@+id/btn_close" />
+
+        <Button
+            android:id="@+id/btn_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ALARM"
+            app:layout_constraintStart_toStartOf="@+id/btn_red"
+            app:layout_constraintTop_toBottomOf="@+id/btn_red" />
+
+        <EditText
+            android:id="@+id/tvSendData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="hour"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/btnSendData"
+            app:layout_constraintTop_toTopOf="@+id/btnSendData" />
+
+        <SeekBar
+            android:id="@+id/seekBarR"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:max="9"
+            android:progress="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_grn" />
+
+        <SeekBar
+            android:id="@+id/seekBarG"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:max="9"
+            android:progress="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/seekBarR"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarR" />
+
+        <SeekBar
+            android:id="@+id/seekBarB"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:max="9"
+            android:progress="0"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/seekBarG"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarG" />
+
+        <Spinner
+            android:id="@+id/spnhour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/btnSendData"
+            app:layout_constraintTop_toBottomOf="@+id/tvSendData" />
+
+        <Spinner
+            android:id="@+id/spnminute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/spnhour"
+            app:layout_constraintTop_toTopOf="@+id/spnhour" />
+
+        <Switch
+            android:id="@+id/modeswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="27dp"
+            android:text="AUTO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_off" />
+
+        <TextView
+            android:id="@+id/tvBluetoothStatus"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:text="status"
+            app:layout_constraintStart_toStartOf="@+id/btnBluetoothConnect"
+            app:layout_constraintTop_toBottomOf="@+id/btnBluetoothConnect" />
+
+        <TextView
+            android:id="@+id/tvReceiveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="현재상태 : "
+            app:layout_constraintStart_toEndOf="@+id/btnBluetoothDisconnect"
+            app:layout_constraintTop_toTopOf="@+id/btnBluetoothDisconnect" />
+
+        <TextView
+            android:id="@+id/textR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            app:layout_constraintEnd_toStartOf="@+id/seekBarR"
+            app:layout_constraintTop_toTopOf="@+id/seekBarR"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/seekBarG"
+            app:layout_constraintTop_toTopOf="@+id/seekBarG" />
+
+        <TextView
+            android:id="@+id/textB"
+            android:layout_width="7dp"
+            android:layout_height="16dp"
+            android:text="B"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/seekBarB"
+            app:layout_constraintTop_toTopOf="@+id/seekBarB" />
+
+        <Button
+            android:id="@+id/btnclose2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="close"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnSendData" />
+
+        <Button
+            android:id="@+id/btnSendData2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="끄기"
+            app:layout_constraintStart_toStartOf="@+id/btnSendData"
+            app:layout_constraintTop_toBottomOf="@+id/btnSendData"
+            tools:visibility="gone" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
